@@ -41,10 +41,16 @@ function selectOrUnselectAll(btnEl) {
     return !isCurrentStateToggled;
 }
 
-document.getElementsByName("checkboxes").forEach(x => {
-    x.addEventListener('change', synchronizeAdvancedToggleButtonState);
+addEventListener("DOMContentLoaded", () => {
+  document.getElementsByName("checkboxes").forEach(x => {
+      x.addEventListener('change', synchronizeAdvancedToggleButtonState);
+  });
+  
+  // Initialize accessibleToggleButton's toggled state to false (default).
+  toggleButton(document.getElementById("accessibleToggleButton"), () => false);
+  
+  // Initialize advancedToggleButton's state so it's in sync with the checkboxes
+  // and so that we don't have to wait until it's pressed to set the ARIA attributes.
+  synchronizeAdvancedToggleButtonState();
 });
 
-// Initialize advancedToggleButton's state so it's in sync with the checkboxes
-// and so that we don't have to wait until it's pressed to set the ARIA attributes.
-synchronizeAdvancedToggleButtonState();

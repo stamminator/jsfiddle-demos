@@ -1,38 +1,44 @@
-<div style="display: inline-grid; grid-template-columns: auto auto; gap: 6px; align-items: first baseline;">
-    <div>Simple toggle</div>    
-    <button type="button" class="btn btn-toggle" onclick="this.classList.toggle('toggled')">
-        <span>Untoggled state</span>
-        <span>Toggled state</span>
-    </button>
-    
-    <div>Pure CSS</div>    
-    <button type="button" class="btn btn-toggle-css" onclick="this.classList.toggle('toggled')"></button>
-    
-    <div>Pure CSS with overrides</div>    
-    <button type="button" class="btn btn-toggle-css" onclick="this.classList.toggle('toggled')"
-        style="--toggled-text: 'State 2 (element)'">
-        <span>oops</span>
-    </button>
-    
-    <div>Toggle with accessibility</div>
-    <div>
-        <button type="button" class="btn btn-toggle" onclick="toggleButton(this)">
-            <span>Accessible label (default)</span>
-            <span>Accessible label (toggled)</span>
+<body>
+    <h2>Pleasant Toggle Button Demo</h2>
+    <h3>Full documentation: <a href="https://github.com/stamminator/jsfiddle-demos/blob/main/pleasant-toggle-button/README.md">https://github.com/stamminator/jsfiddle-demos/blob/main/pleasant-toggle-button/README.md</a></h3>
+    <hr />
+    <div style="display: inline-grid; grid-template-columns: auto auto; gap: 6px; align-items: first baseline;">
+        <div>Simple toggle</div>    
+        <button type="button" class="btn btn-toggle" onclick="this.classList.toggle('toggled')">
+            <span>Default state</span>
+            <span>Toggled state</span>
         </button>
-    </div>
-    
-    <div>Advanced toggle<br/>(set state externally)</div>
-    <div>
-        <button id="advancedToggleButton" type="button" class="btn btn-toggle" onclick="toggleButton(this, selectOrUnselectAll)">
-            <span>Select all</span>
-            <span>Unselect all</span>
+        
+        <div>Pure CSS</div>    
+        <button type="button" class="btn btn-toggle-css" onclick="this.classList.toggle('toggled')"></button>
+        
+        <div>Pure CSS with overrides</div>    
+        <button type="button" class="btn btn-toggle-css" onclick="this.classList.toggle('toggled')"
+            style="--toggled-text: 'State 2 (element)'">
+            <span>oops</span>
         </button>
+        
+        <div>Toggle with accessibility</div>
         <div>
-            <label><input type="checkbox" name="checkboxes" value="1" checked /> Box 1</label>
-            <label><input type="checkbox" name="checkboxes" value="2"  /> Box 2</label>
-            <label><input type="checkbox" name="checkboxes" value="3" /> Box 3</label>
+            <button id="accessibleToggleButton" type="button" class="btn btn-toggle" onclick="toggleButton(this)">
+                <span>Accessible label (default)</span>
+                <span>Accessible label (toggled)</span>
+            </button>
         </div>
+        
+        <div>Advanced toggle<br/>(set state externally)</div>
+        <div>
+            <button id="advancedToggleButton" type="button" class="btn btn-toggle" onclick="toggleButton(this, selectOrUnselectAll)">
+                <span>Select all</span>
+                <span>Unselect all</span>
+            </button>
+            <div>
+                <label><input type="checkbox" name="checkboxes" value="1" checked /> Box 1</label>
+                <label><input type="checkbox" name="checkboxes" value="2"  /> Box 2</label>
+                <label><input type="checkbox" name="checkboxes" value="3" /> Box 3</label>
+            </div>
+        </div>
+        
     </div>
-    
-</div>
+</body>
+

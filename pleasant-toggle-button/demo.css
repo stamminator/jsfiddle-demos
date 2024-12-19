@@ -1,3 +1,7 @@
+body {
+  font-family: sans-serif;
+}
+
 :root {
   --default-text: "State 1 (root)";
   --toggled-text: "State 2 (root)";
