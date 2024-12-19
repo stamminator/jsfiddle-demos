@@ -1,4 +1,4 @@
-**JSFiddle URL: https://jsfiddle.net/gh/get/library/pure/stamminator/jsfiddle-demos/tree/main/pleasant-toggle-button**
+**JSFiddle URL: https://jsfiddle.net/gh/get/library/pure/stamminator/jsfiddle-demos/tree/master/pleasant-toggle-button**
 
 Demo of a two-state toggle button with several notable features:
 
