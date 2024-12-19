@@ -1,8 +1,7 @@
----
 name: Pleasant two-state toggle button
 description: Two-state toggle button that stays the same size when toggling between different states, is highly accessible, and is easy to use.
 authors:
   - Jacob Stamm
-resources:
+resources: 
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css
 normalize_css: no
-...
