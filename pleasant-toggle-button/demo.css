@@ -1,0 +1,99 @@
+:root {
+  --default-text: "State 1 (root)";
+  --toggled-text: "State 2 (root)";
+}
+
+button {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  border: 2px outset transparent;
+  padding: 6px 12px;
+  font-family: sans-serif;
+  border-radius: 2px;
+
+  color: #fff;
+  background-color: #474141;
+  border-color: #3a3636;
+
+  &:hover {
+    background-color: #3a3636;
+  }
+
+  &:active {
+    border-style: inset;
+    background-color: #2d2828;
+  }
+}
+
+.btn-toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: min-content;
+
+  > * {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow-y: hidden;
+  }
+
+  > :first-child {
+    height: auto;
+  }
+
+  > :nth-child(2) {
+    height: 0;
+  }
+
+  &.toggled {
+    flex-wrap: wrap-reverse; /* preserves "first baseline" behavior */
+    
+    > :first-child {
+      height: 0;
+    }
+
+    > :last-child {
+      height: auto;
+    }
+  }
+}
+
+.btn-toggle-css {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: min-content;
+  
+  > * {
+      display: none; /* ensure only pseudoelements appear */
+  }
+
+  &::before,
+  &::after {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow-y: hidden;
+  }
+
+  &::before {
+    height: auto;
+    content: var(--default-text);
+  }
+  &::after {
+    height: 0;
+    content: var(--toggled-text);
+  }
+
+  &.toggled {
+    flex-wrap: wrap-reverse; /* preserves "first baseline" behavior */
+    
+    &::before {
+      height: 0;
+    }
+    &::after {
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+name: Pleasant two-state toggle button
+description: GitHub-hosted jsFiddle demo of a two-state toggle button that maintains the same width even as the inner text changes, without using JavaScript or hard-coded widths. With a bit of flexbox magic, the width of the button is derived from whichever of the two states' text is wider. The two toggle states can be defined either as child elements of the button, or with pure CSS using CSS variables. For improved accessibility and advanced use cases (like managing the toggled state programatically), see the Advanced Toggle example.
+authors:
+  - Jacob Stamm
+resources:
+normalize_css: no
